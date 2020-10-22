@@ -32,13 +32,18 @@ def main():
         st.markdown(f"This dataset contains  : {df.shape[0]} rows and, {df.shape[1]} columns")
         #if st.checkbox("Data types"):
             #st.dataframe(df.dtypes)
-        if st.checkbox("Click here to see the summary statistics"):
-            st.write(df.describe())
+
+        #if st.checkbox("Click here to see the summary statistics"):
+            #st.write(df.describe())
+
             #st.markdown("---")
             #st.markdown("---")
         st.markdown("---")
-        cols_to_style = st.multiselect("Choose columns to apply BG gradient", features)
+        cols_to_style = st.multiselect("Choose columns to apply rank color gradient", features)
         st.dataframe(df.style.background_gradient(subset=cols_to_style, cmap="BuGn"))
+        if st.checkbox("Click here to see the summary statistics"):
+            st.write(df.describe())
+
         st.balloons()
         st.markdown("---")
 
