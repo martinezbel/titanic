@@ -14,7 +14,7 @@ def main():
     st.text("""Created by Oscar Martinez, Data Scientist """)
     st.text("(Python, Machine Learning, AI, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
-    st.markdown("This App applies data science and machine learning to analyze  existing data about passengers on the Titanic")
+    st.markdown("This App applies data science and machine learning to analyze  existing data about passengers on the Titanic. Please chose on the sidebar differents analysis options")
     st.sidebar.header("Analysis options:")
 
     df = load_data()
@@ -83,8 +83,8 @@ def main():
 
 
 
-    if st.sidebar.checkbox("Correlation", False):
-        st.header("Correlation")
+    if st.sidebar.checkbox("Correlation matrix", False):
+        st.header("Correlation matrix")
         fig, ax = plt.subplots()
         sns.heatmap(df.corr(), ax=ax)
         st.pyplot(fig)
