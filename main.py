@@ -114,6 +114,19 @@ def main():
     st.sidebar.text("(Python, Machine Learning, AI, DevOps)")
     #st.sidebar.text("Code : https://github.com")
 
+    hide_footer_style = """
+    <style>
+    .reportview-container .main footer {visibility: hidden;}    
+    """
+    st.markdown(hide_footer_style, unsafe_allow_html=True)
+
+    hide_menu_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            </style>
+            """
+    st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 
 if __name__ == "__main__":
     main()
