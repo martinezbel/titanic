@@ -11,8 +11,8 @@ from utils import train_rf
 
 def main():
     st.header("The Titanic Disaster App")
-    st.text("""Created by Oscar Martinez, Data Scientist (Python, Machine Learning, AI, DevOps) """)
-    #st.text("(Python, Machine Learning, AI, DevOps)")
+    st.text("""Created by Oscar Martinez, Data Scientist """)
+    st.text("(Python, Machine Learning, AI, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
     st.markdown("This App applies data science and machine learning to analyze an existing dataset about passengers on the Titanic")
     st.sidebar.header("Analyze")
@@ -26,8 +26,8 @@ def main():
     #st.markdown(f"{description}", unsafe_allow_html=True)
     st.markdown("---")
 
-    if st.sidebar.checkbox("Data preview", True):
-        st.subheader("Data preview")
+    if st.sidebar.checkbox("Looking at the Dataset", True):
+        st.header("Data preview")
         st.markdown("The dataset analyzed is available at https://www.kaggle.com")
         st.markdown(f"This dataset contains  : {df.shape[0]} rows and, {df.shape[1]} columns")
         #if st.checkbox("Data types"):
