@@ -14,8 +14,8 @@ def main():
     st.text("""Created by Oscar Martinez, Data Scientist """)
     st.text("(Python, Machine Learning, AI, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
-    st.markdown("This App applies data science and machine learning to analyze an existing dataset about passengers on the Titanic")
-    st.sidebar.header("Analyze")
+    st.markdown("This App applies data science and machine learning to analyze  existing data about passengers on the Titanic")
+    st.sidebar.header("Analysis options:")
 
     df = load_data()
     target = "Survived"
@@ -38,7 +38,7 @@ def main():
 
             #st.markdown("---")
             #st.markdown("---")
-        #st.markdown("---")
+        st.markdown("---")
         cols_to_style = st.multiselect("Choose columns to apply rank color gradient", features)
         st.dataframe(df.style.background_gradient(subset=cols_to_style, cmap="BuGn"))
         st.markdown(f"This dataset contains  : {df.shape[0]} rows and, {df.shape[1]} columns")
