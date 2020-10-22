@@ -11,8 +11,8 @@ from utils import train_rf
 
 def main():
     st.header("The Titanic Disaster App")
-    st.text("""Created by Oscar Martinez, Data Scientist """)
-    st.text("(Python, Machine Learning, AI, DevOps)")
+    st.text("""Created by Oscar Martinez, Data Scientist (Python, Machine Learning, AI, DevOps) """)
+    #st.text("(Python, Machine Learning, AI, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
     st.markdown("This App applies data science and machine learning to analyze an existing dataset about passengers on the Titanic")
     st.sidebar.header("Analyze")
@@ -59,7 +59,7 @@ def main():
     #     st.markdown("---")
 
 
-    if st.sidebar.checkbox("Plot distribution", False):
+    if st.sidebar.checkbox("Data in charts", False):
         st.header("Plot distribution")
         #st.echo():# if we add echo() displays and run  code
         col = st.selectbox("Choose column of the dataset to display in a chart", features)
@@ -78,7 +78,7 @@ def main():
 
 
     if st.sidebar.checkbox("Correlation", False):
-        st.subheader("Correlation")
+        st.header("Correlation")
         fig, ax = plt.subplots()
         sns.heatmap(df.corr(), ax=ax)
         st.pyplot(fig)
@@ -87,7 +87,7 @@ def main():
 
 
     if st.sidebar.checkbox("Classification", False):
-        st.subheader("Aply the  Random Forest Classifier")
+        st.header("Aply the  Random Forest Classifier")
         st.markdown("The Random Forest algorithm creates decision trees, gets the prediction from each of them and selects the best solution. Here the algorithm predicts survived passengers ")
         n_estimators = st.number_input("Choose number of trees:", 1, 1000, 100)
         max_depth = st.number_input("Max depth:", 1, 100, 5)
