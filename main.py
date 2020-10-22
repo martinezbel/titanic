@@ -11,7 +11,8 @@ from utils import train_rf
 
 def main():
     st.header("The Titanic Disaster App")
-    st.markdown("Created by Oscar Martinez/ Data Scientist/(Python, Machine Learning, AI, DevOps)")
+    st.markdown("Created by Oscar Martinez,  Data Scientist")
+    st.markdown("(Python, Machine Learning, AI, Automation, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
     st.markdown("This App applies data science and machine learning to analyze an existing dataset about passengers on the Titanic")
     st.sidebar.header("Analyze")
