@@ -60,7 +60,7 @@ def main():
 
 
     if st.sidebar.checkbox("Plot distribution", False):
-        st.subheader("Plot distribution")
+        st.header("Plot distribution")
         #st.echo():# if we add echo() displays and run  code
         col = st.selectbox("Choose column of the dataset to display in a chart", features)
         with_target = st.checkbox("Look by Survived / died")
