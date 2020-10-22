@@ -14,7 +14,7 @@ def main():
     st.text("""Created by Oscar Martinez, Data Scientist """)
     st.text("(Python, Machine Learning, AI, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
-    st.markdown("This App applies data science and machine learning to analyze  existing data about passengers on the Titanic. Please chose on the sidebar differents analysis options")
+    st.markdown("This App applies data science and machine learning to analyze  existing data about passengers on the Titanic. Please chose on the left sidebar differents analysis options")
     st.sidebar.header("Analysis options:")
 
     df = load_data()
@@ -24,7 +24,7 @@ def main():
     #description = read_markdown_file("pages/titanic.md")
     #st.image("images/titanic.jpg", width=400)
     #st.markdown(f"{description}", unsafe_allow_html=True)
-    st.markdown("---")
+    #st.markdown("---")
 
     if st.sidebar.checkbox("Looking at the Dataset", True):
         st.header("Data preview")
