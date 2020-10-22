@@ -29,7 +29,7 @@ def main():
     if st.sidebar.checkbox("Looking at the Dataset", True):
         st.header("Data preview")
         st.markdown("The dataset analyzed is available at https://www.kaggle.com")
-        st.markdown(f"This dataset contains  : {df.shape[0]} rows and, {df.shape[1]} columns")
+        #st.markdown(f"This dataset contains  : {df.shape[0]} rows and, {df.shape[1]} columns")
         #if st.checkbox("Data types"):
             #st.dataframe(df.dtypes)
 
@@ -38,9 +38,10 @@ def main():
 
             #st.markdown("---")
             #st.markdown("---")
-        st.markdown("---")
+        #st.markdown("---")
         cols_to_style = st.multiselect("Choose columns to apply rank color gradient", features)
         st.dataframe(df.style.background_gradient(subset=cols_to_style, cmap="BuGn"))
+        st.markdown(f"This dataset contains  : {df.shape[0]} rows and, {df.shape[1]} columns")
         if st.checkbox("Click here to see the summary statistics"):
             st.write(df.describe())
 
