@@ -15,6 +15,7 @@ html_temp = """
 		"""
 
 def main():
+    st.markdown(html_temp.format('royalblue', 'white'), unsafe_allow_html=True)
     st.header("The Titanic Disaster App")
     st.text("""Created by Oscar Martinez, Data Scientist """)
     st.text("(Python, Machine Learning, AI, DevOps)")
