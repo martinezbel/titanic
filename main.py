@@ -10,13 +10,13 @@ from utils import train_rf
 
 html_temp = """
 		<div style="background-color:{};padding:10px;border-radius:10px">
-		<h1 style="color:{};text-align:center;">Programming Languages Trend Streamlit App </h1>
+		<h1 style="color:{};text-align:center;">The Titanic Disaster App </h1>
 		</div>
 		"""
 
 def main():
     st.markdown(html_temp.format('royalblue', 'white'), unsafe_allow_html=True)
-    st.header("The Titanic Disaster App")
+    #st.header("The Titanic Disaster App")
     st.text("""Created by Oscar Martinez, Data Scientist """)
     st.text("(Python, Machine Learning, AI, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
