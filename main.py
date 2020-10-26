@@ -17,6 +17,7 @@ html_temp = """
 def main():
     st.markdown(html_temp.format('royalblue', 'white'), unsafe_allow_html=True)
     #st.header("The Titanic Disaster App")
+    st.text("")
     st.text("""Created by Oscar Martinez, Data Scientist """)
     st.text("(Python, Machine Learning, AI, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
@@ -107,7 +108,7 @@ def main():
         if st.button("Run training"):
             with st.spinner("Training en cours"):
                 clf, confusion_matrix = train_rf(df, n_estimators, max_depth)
-                st.balloons()
+                #st.balloons()
                 st.pyplot(confusion_matrix)
 
         st.markdown("---")
