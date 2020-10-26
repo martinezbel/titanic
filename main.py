@@ -10,7 +10,15 @@ from utils import train_rf
 
 
 def main():
-    st.header("The Titanic Disaster App")
+    #st.header("The Titanic Disaster App")
+    html_temp = """
+    		<div style="background-color:{};padding:10px;border-radius:10px">
+    		<h1 style="color:{};text-align:center;">Programming Languages Trend Streamlit App </h1>
+    		</div>
+    		"""
+
+
+
     st.text("""Created by Oscar Martinez, Data Scientist """)
     st.text("(Python, Machine Learning, AI, DevOps)")
     st.subheader("Using machine learning to generate new insights into the sinking of the Titanic")
@@ -113,6 +121,9 @@ def main():
     st.sidebar.text(" Data Scientist")
     st.sidebar.text("(Python, Machine Learning, AI, DevOps)")
     #st.sidebar.text("Code : https://github.com")
+    # st.sidebar.subheader(""" [OScar Martinez](https://www.linkedin.com/in/oscar-martinez-6bb41918) """)
+
+
 
     hide_footer_style = """
     <style>
